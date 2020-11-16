@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../CECS361_GroupProject.srcs/sources_1/new/memory2.v" \
+"../../../../CECS361_GroupProject.srcs/sim_1/imports/CECS361_GroupProject/FIFO_LIFO_TB.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
