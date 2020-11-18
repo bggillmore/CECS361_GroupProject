@@ -37,7 +37,8 @@ module ALU(
     output reg  [31:0] Y;    // ALU 32-bit output
     
     // internal variables, calculate overflow //
-    wire [32:0] temp;
+    wire [63:0] temp;
+    assign temp = {32'b0, A} * {32'b0, B};
     //assign temp = {1'b0,A} + {1'b0,B}; // calculate overflow 
     //assign overflow = temp[32];        // assign overflow to MSB
     
@@ -47,8 +48,9 @@ module ALU(
             // 4 operations //
             4'b0001: {overflow, Y} = {1'b0, A} + {1'b0, B};  // addition
             4'b0010: {overflow, Y} = {1'b0, A} - {1'b0, B};  // subtraction
-            4'b0100: {overflow, Y} = {1'b0, A} * {1'b0, B};  // multiplication
+            4'b0100: {overflow, Y} = {|temp[63:32],temp[31:0]};  // multiplication
             4'b1000: begin
+                overflow = 0;
                 if  (B != 32'd0) Y = A / B; // division, prevent division by 0
                 else Y = 32'd0;  // assigned 33-bit bc of overflow
             end
