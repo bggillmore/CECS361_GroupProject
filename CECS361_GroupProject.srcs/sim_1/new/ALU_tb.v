@@ -62,7 +62,6 @@ initial begin
                             $display("Multiplication Error: A= %h, B= %h, Y= %h, O/F = %h", A, B, Y, of); 
                         if( |(64'hFFFFFFFF00000000 &({32'b0, A}*{32'b0, B})) != of)
                         begin
-                            $display("%h", (({32'b0, A}*{32'b0, B}) & 64'hFFFFFFFF00000000));
                             $display("Multiplication o/f error: A= %h, B= %h, Y= %h, O/F = %h", A, B, Y, of);
                         end 
                     end
