@@ -1,6 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../ALU.v" \
+"../../../../ALU_rio.v" \
 "../../../../Memory_Controller.v" \
 "../../../../Top_level.v" \
 "../../../../CECS361_GroupProject.srcs/sources_1/new/memory2.v" \

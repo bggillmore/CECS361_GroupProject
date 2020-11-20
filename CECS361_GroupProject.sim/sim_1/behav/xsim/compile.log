@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/17149/Documents/CECS361_GroupProject/ALU_rio.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sim_1/new/ALU_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_tb
