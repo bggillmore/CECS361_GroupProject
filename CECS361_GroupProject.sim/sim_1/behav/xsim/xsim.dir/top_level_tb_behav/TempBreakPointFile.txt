@@ -1,3 +1,2 @@
 Breakpoint File Version 1.0
-72 true C:/Users/17149/Documents/CECS361_GroupProject/top_level_tb.v
 64 true C:/Users/17149/Documents/CECS361_GroupProject/top_level_tb.v

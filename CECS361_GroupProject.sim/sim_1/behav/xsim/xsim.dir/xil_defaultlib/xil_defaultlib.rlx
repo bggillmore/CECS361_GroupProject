@@ -2,13 +2,14 @@
 2019.1
 May 24 2019
 15:06:07
+C:/Users/17149/Documents/CECS361_FinalProject_StackCalc/CECS361_FinalProject_StackCalc.srcs/sources_1/new/Memory.v,1605405776,verilog,,C:/Users/17149/Documents/CECS361_GroupProject/Memory_Controller.v,,Memory,,,,,,,,
 C:/Users/17149/Documents/CECS361_GroupProject/ALU_rio.v,1605720793,verilog,,C:/Users/17149/Documents/CECS361_GroupProject/Memory_Controller.v,,ALU,,,,,,,,
 C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
 C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sim_1/imports/CECS361_GroupProject/FIFO_LIFO_TB.v,1605402369,verilog,,,,FIFO_LIFO_TB,,,,,,,,
 C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sim_1/new/ALU_tb.v,1605723865,verilog,,,,ALU_tb,,,,,,,,
 C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sim_1/new/Memory_tb.v,1605473136,verilog,,,,Memory_tb,,,,,,,,
 C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/imports/CECS361_GroupProject/stacker_FIFO_LIFO.v,1605399134,verilog,,C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sim_1/imports/CECS361_GroupProject/FIFO_LIFO_TB.v,,stacker_FIFO_LIFO,,,,,,,,
-C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v,1605909039,verilog,,C:/Users/17149/Documents/CECS361_GroupProject/top_level_tb.v,,memory2,,,,,,,,
-C:/Users/17149/Documents/CECS361_GroupProject/Memory_Controller.v,1605478474,verilog,,C:/Users/17149/Documents/CECS361_GroupProject/Top_level.v,,Memory_Controller,,,,,,,,
-C:/Users/17149/Documents/CECS361_GroupProject/Top_level.v,1605555337,verilog,,C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v,,Top_level,,,,,,,,
+C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v,1605914834,verilog,,C:/Users/17149/Documents/CECS361_GroupProject/top_level_tb.v,,memory2,,,,,,,,
+C:/Users/17149/Documents/CECS361_GroupProject/Memory_Controller.v,1605916251,verilog,,C:/Users/17149/Documents/CECS361_GroupProject/Top_level.v,,Memory_Controller,,,,,,,,
+C:/Users/17149/Documents/CECS361_GroupProject/Top_level.v,1605914806,verilog,,C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v,,Top_level,,,,,,,,
 C:/Users/17149/Documents/CECS361_GroupProject/top_level_tb.v,1605909341,verilog,,,,top_level_tb,,,,,,,,

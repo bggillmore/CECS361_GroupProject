@@ -28,13 +28,13 @@ module Memory_Controller(
     output reg push, pop, 
     output reg [31:0] aluA, aluB, memIn
     );
-    reg [1:0] cycleCount;
+    reg [2:0] cycleCount;
     
     always @(posedge clk, negedge rst)
     begin
         if(~rst)
         begin
-            cycleCount <= 2'b0;
+            cycleCount <= 3'b0;
             aluA <= 32'b0;
             aluB <= 32'b0;
             memIn <= 32'b0;
@@ -48,47 +48,62 @@ module Memory_Controller(
                 //pop twice hold values and push
                 //this is a possible edge case in that the buttons changes mid cycle
                 //ie: count1:btn=00001   count2: btn=00001   count3:btn=01000
-                //if you are not careful you will screw yourself in a sim loop dummy
                 casex(cycleCount)
-                    2'b0?:
+                    3'b000:
                     begin
-                        //is this a race condition?
-                        aluB <= aluA;   //if i expose memOut - 1
-                        aluA <= memOut; //can i save a clock cycle here?
+                        aluB <= memOut; 
                         push <= 1'b0;
                         pop <= 1'b1;
-                        cycleCount <= cycleCount +1;
+                        cycleCount <= cycleCount +3'b1;
                     end 
-                    2'b10: 
+                    3'b001:
+                    begin
+                        push <= 1'b0;
+                        pop <= 1'b0;
+                        cycleCount <= cycleCount +3'b1;
+                    end
+                    3'b010:
+                    begin
+                        aluA <= memOut;
+                        push <= 1'b0;
+                        pop <= 1'b1;
+                        cycleCount <= cycleCount +3'b1;
+                    end 
+                    3'b011:
+                    begin
+                        push <= 1'b0;
+                        pop <= 1'b0;
+                        cycleCount <= cycleCount +3'b1;
+                    end
+                    3'b100: 
                     begin
                         pop <= 1'b0;
                         push <= 1'b1;
                         memIn <= aluOut;
-                        cycleCount <= cycleCount +1;
+                        cycleCount <= cycleCount +3'b1;
                     end
-                    2'b11: //do nothing wait for all btns to be 0
+                    3'b101: //do nothing wait for all btns to be 0
                     begin
                         push <= 1'b0;
                         cycleCount <= cycleCount; 
                     end
                     default: 
                     begin
-                        pop <= 1'b0;
                         push <= 1'b0;
-                        aluA <= 32'b0;
-                        aluB <= 32'b0;
+                        pop <= 1'b0;
+                        cycleCount <= 3'b0;
                     end
                 endcase
             end
             else if(btns[0] & ~|btns[4:1]) //only push btn is pressed
             begin
                 //push
-                if(cycleCount == 2'b0) //only push once
+                if(cycleCount == 3'b0) //only push once
                 begin
                     pop <= 1'b0;
                     push <= 1'b1;
                     memIn <= {16'b0, switches};
-                    cycleCount <= cycleCount + 1'b1;
+                    cycleCount <= cycleCount + 3'b1;
                 end
                 else
                     push <= 1'b0;
@@ -97,7 +112,7 @@ module Memory_Controller(
             begin
                 push <= 1'b0;
                 pop <= 1'b0;
-                cycleCount <= 2'b0;
+                cycleCount <= 3'b0;
             end
         end
     end

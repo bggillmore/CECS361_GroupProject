@@ -40,8 +40,10 @@ module Top_level(
                          .memOut(memOut), .btns(btns), .memIn(memIn), .push(push), 
                          .pop(pop), .aluA(aluA), .aluB(aluB));
     //mem unit
+    //Memory mem(.clk(clk), .rst(rst), .in(memIn), .push(push), .pop(pop), .stackQueue(stackQueue), 
+    //           .out(memOut), .empty(empty), .full(full));
     memory2 mem(.clk(clk), .reset(rst), .data_in(memIn), .push_queue(push), .pop_dequeue(pop), .sel(stackQueue), 
                .data_out(memOut), .empty(empty), .full(full));
-               
+
     //sseg
 endmodule

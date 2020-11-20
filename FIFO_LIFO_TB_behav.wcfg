@@ -11,54 +11,53 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1350000000fs"></ZoomStartTime>
-      <ZoomEndTime time="1468555559fs"></ZoomEndTime>
-      <Cursor1Time time="1385000000fs"></Cursor1Time>
+      <ZoomStartTime time="1387240000fs"></ZoomStartTime>
+      <ZoomEndTime time="1468440001fs"></ZoomEndTime>
+      <Cursor1Time time="1425000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="156"></NameColumnWidth>
-      <ValueColumnWidth column_width="95"></ValueColumnWidth>
+      <ValueColumnWidth column_width="79"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="10" />
    <wvobject fp_name="/top_level_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_level_tb/rst" type="logic">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
    <wvobject fp_name="/top_level_tb/sq" type="logic">
       <obj_property name="ElementShortName">sq</obj_property>
       <obj_property name="ObjectShortName">sq</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_level_tb/sw" type="array">
-      <obj_property name="ElementShortName">sw[15:0]</obj_property>
-      <obj_property name="ObjectShortName">sw[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/top_level_tb/btns" type="array">
       <obj_property name="ElementShortName">btns[4:0]</obj_property>
       <obj_property name="ObjectShortName">btns[4:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_level_tb/sseg" type="array">
-      <obj_property name="ElementShortName">sseg[31:0]</obj_property>
-      <obj_property name="ObjectShortName">sseg[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_level_tb/empty" type="logic">
-      <obj_property name="ElementShortName">empty</obj_property>
-      <obj_property name="ObjectShortName">empty</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_level_tb/full" type="logic">
-      <obj_property name="ElementShortName">full</obj_property>
-      <obj_property name="ObjectShortName">full</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_level_tb/i" type="array">
-      <obj_property name="ElementShortName">i[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/top_level_tb/tl/mem/memory" type="array">
       <obj_property name="ElementShortName">memory[0:31][31:0]</obj_property>
       <obj_property name="ObjectShortName">memory[0:31][31:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_level_tb/tl/alu/A" type="array">
+      <obj_property name="ElementShortName">A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_level_tb/tl/alu/B" type="array">
+      <obj_property name="ElementShortName">B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_level_tb/tl/mem/push_queue" type="logic">
+      <obj_property name="ElementShortName">push_queue</obj_property>
+      <obj_property name="ObjectShortName">push_queue</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_level_tb/tl/mem/pop_dequeue" type="logic">
+      <obj_property name="ElementShortName">pop_dequeue</obj_property>
+      <obj_property name="ObjectShortName">pop_dequeue</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_level_tb/tl/mem/data_out" type="array">
+      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_level_tb/tl/alu/Y" type="array">
+      <obj_property name="ElementShortName">Y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Y[31:0]</obj_property>
    </wvobject>
 </wave_config>
