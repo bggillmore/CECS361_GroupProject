@@ -29,11 +29,11 @@ module memory2(
     );
 // bits per memory || number of memory spaces (AKA slots)
     reg [31:0] memory [0:31];           //32x32 bit memory space
-    reg [31:0] next_out;                //will work like an FSM
-    reg [5:0] slot, next_slot,          // write pointer (push/queue)
+//reg [31:0] next_out;                //will work like an FSM
+    reg [4:0] slot, next_slot,          // write pointer (push/queue)
               front, next_front,        // pointer to locate Front element (FIFO) (or Bottom element(LIFO))
-              top, next_top,            // pointer to locate Top element(LIFO)
-              writecount, next_write;   // write counter
+              top, next_top;            // pointer to locate Top element(LIFO)
+    reg [5:0] writecount, next_write;   // write counter
     
     integer i;
     assign full = (next_write === 32); //all slots filled
@@ -64,39 +64,38 @@ module memory2(
     
     //Combinational Block
     always @(*) begin
-        if (sel) begin // sel = 1, FIFO
+        if (sel) begin // sel = 1, FIFO QUEUE
             if (push_queue) begin //Queue
                 if(~full)
-                    next_write = writecount+1;//Add to counter. If full, stop counting up.
-                //next_write = (full)? writecount : writecount + 1; //Add to counter. If full, stop counting up.
-                memory[slot] = (full)? memory[slot] : data_in; //if full, do not take in any new data input
-                next_slot = (full)? slot : (slot == 31)? 0 : slot + 1; //if full, stay on same slot, else go to next higher slot
-                //next_out = memory[front]; //display first inputted data (front in line)
-                data_out = (full)? data_out : memory[slot]; //display inputted data. If full, show last data inputted.
-                //next_out = (full)? data_out : memory[slot]; //display inputted data. If full, show last data inputted.
-                
+                begin
+                    next_write = writecount + 5'b1; //Add to counter. If full, stop counting up.
+                    memory[slot] =  data_in;        //if full, do not take in any new data input
+                    next_slot = slot + 5'b1;        //if full, stay on same slot, else go to next higher slot
+                    data_out = memory[slot];        //display inputted data. If full, show last data inputted.
+                end
             end
             
             else if (pop_dequeue) begin //Dequeue Data in front of line
-                next_write = (empty)? writecount : writecount - 1; //Subtract from counter. If empty, stop counting down.
-                next_front = (empty)? front : front + 1; //update FIFO pointer to next data in front of line
-                //next_out = (empty || writecount==1)? 32'b0 : (front==31)? memory[0] : memory[front+1];//if empty=1 OR next_write=0(therefore, if writecount=1), display 0. Else, display next data in front of line.
-                //next_out = (empty)? 32'b0 : memory[front]; // expose popped data for one clock
-                data_out = (empty)? 32'b0 : memory[front]; // expose popped data for one clock
+                if(~empty)
+                begin
+                    next_write = writecount - 5'b1; //Subtract from counter. If empty, stop counting down.
+                    next_front = front + 5'b1;      //update FIFO pointer to next data in front of line
+                    data_out = memory[front];       // expose popped data for one clock
+                end
+                else
+                    data_out = 32'b0;
             end
             
             else begin //Hold all data
                 next_write = writecount;
                 next_front = front;
                 next_slot = slot;
-                //next_out = data_out; //display & hold last data inputted.
-                //next_out = (empty)? 32'b0:memory[slot]; //display rear of queue so we can see what is added
-                data_out = (empty)? 32'b0:memory[slot]; //display rear of queue so we can see what is added
+                data_out = (empty)?32'b0:data_out; //display rear of queue so we can see what is added
             end
         end
         
         
-        else begin // sel = 0, LIFO
+        else begin // sel = 0, LIFO STACK
             if (push_queue) begin //Push
                 if(~full)
                 begin
@@ -116,17 +115,17 @@ module memory2(
                     data_out = memory[top]; 
                     next_top =  top - 5'b1;
                 end
+                else
+                    data_out = 32'b0;
             end
             
             else begin //Hold all data
                 next_write = writecount;
                 next_slot = slot;
-                next_out = data_out; //display & hold last data inputted.
+                data_out = (empty)? 32'b0 : data_out; //display & hold last data inputted.
                 next_top = top;
             end
         end
-        if(empty)
-            data_out = 32'b0;
     end
     
 endmodule

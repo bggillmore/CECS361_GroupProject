@@ -51,26 +51,28 @@ module Memory_Controller(
                 casex(cycleCount)
                     3'b000:
                     begin
-                        aluB <= memOut; 
+                        //aluB <= memOut; 
                         push <= 1'b0;
                         pop <= 1'b1;
                         cycleCount <= cycleCount +3'b1;
                     end 
                     3'b001:
                     begin
+                        aluB <= memOut;
                         push <= 1'b0;
                         pop <= 1'b0;
                         cycleCount <= cycleCount +3'b1;
                     end
                     3'b010:
                     begin
-                        aluA <= memOut;
+                        //aluA <= memOut;
                         push <= 1'b0;
                         pop <= 1'b1;
                         cycleCount <= cycleCount +3'b1;
                     end 
                     3'b011:
                     begin
+                        aluA <= memOut;
                         push <= 1'b0;
                         pop <= 1'b0;
                         cycleCount <= cycleCount +3'b1;
