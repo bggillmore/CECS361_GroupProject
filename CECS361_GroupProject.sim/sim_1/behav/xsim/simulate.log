@@ -1,0 +1,10 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+Begining Stack Pushing Test
+Memory Filled!
+Begining Stack Adding Test
+Begining Enqueue Test
+Memory Filled!
+Begining Queue Adding Test
+Stopped at time : 10310 ns : File "C:/Users/17149/Documents/CECS361_GroupProject/top_level_tb.v" Line 114
+DONE!

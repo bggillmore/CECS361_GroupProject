@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 10/24/2020 09:51:09 PM
+// Create Date: 02/05/2020 04:08:41 PM
 // Design Name: 
-// Module Name: ALU
+// Module Name: anode_selector
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,21 +20,20 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ALU(
-    input [31:0] A, B,
-    input [3:0] op,
-    output reg [31:0] Y
+module anode_selector(
+    input clk, rst, rotate,
+    output reg [7:0] anode
     );
     
-    always @(*)
+    always @(posedge clk, negedge rst)
     begin
-        case(op)
-            //add overflow flags
-            4'b0001: Y = A+B;
-            4'b0010: Y = A-B;
-            4'b0100: Y = A*B;
-            4'b1000: Y = A/B;
-            default: Y = 32'b0;
-        endcase 
+        if(~rst)
+            anode <= 8'hFE;
+        else
+        begin
+            //anode <= rotate?{anode[6:0],anode[7]}: anode[7:0];
+            if(rotate)
+                anode <= {anode[6:0],anode[7]};
+        end
     end
 endmodule

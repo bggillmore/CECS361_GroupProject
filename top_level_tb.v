@@ -28,8 +28,11 @@ wire [31:0] sseg;
 wire empty, full;
  
 Top_level tl(.clk(clk), .rst(rst), .stackQueue(sq), .switches(sw), .btns(btns), 
-             .toSSEG(sseg), .empty(empty), .full(full));
+             .empty(empty), .full(full));
 integer i, j, seriesSum;
+
+assign sseg = tl.memOut; //memOut
+
 always #5 clk = ~clk;
 initial begin
     rst = 0;

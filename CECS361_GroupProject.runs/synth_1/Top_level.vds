@@ -1,0 +1,787 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Nov 29 20:27:04 2020
+# Process ID: 56108
+# Current directory: C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.runs/synth_1
+# Command line: vivado.exe -log Top_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_level.tcl
+# Log file: C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.runs/synth_1/Top_level.vds
+# Journal file: C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Top_level.tcl -notrace
+Command: synth_design -top Top_level -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 67076 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 811.094 ; gain = 179.102
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top_level' [C:/Users/17149/Documents/CECS361_GroupProject/Top_level.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/debounce.v:23]
+WARNING: [Synth 8-5788] Register shiftReg_reg in module debounce is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/debounce.v:42]
+WARNING: [Synth 8-5788] Register Q_reg in module debounce is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/debounce.v:43]
+WARNING: [Synth 8-5788] Register nQ_reg in module debounce is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/debounce.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/debounce.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/17149/Documents/CECS361_GroupProject/ALU_rio.v:25]
+INFO: [Synth 8-226] default block is never used [C:/Users/17149/Documents/CECS361_GroupProject/ALU_rio.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (2#1) [C:/Users/17149/Documents/CECS361_GroupProject/ALU_rio.v:25]
+INFO: [Synth 8-6157] synthesizing module 'Memory_Controller' [C:/Users/17149/Documents/CECS361_GroupProject/Memory_Controller.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Memory_Controller' (3#1) [C:/Users/17149/Documents/CECS361_GroupProject/Memory_Controller.v:23]
+INFO: [Synth 8-6157] synthesizing module 'memory2' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:24]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:39]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'memory2' (4#1) [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:24]
+INFO: [Synth 8-6157] synthesizing module 'SSEG' [C:/Users/17149/Documents/CECS361_GroupProject/sseg_sources/top_level_sseg.v:23]
+INFO: [Synth 8-6157] synthesizing module 'rotate_gen' [C:/Users/17149/Documents/CECS361_GroupProject/sseg_sources/rotate_gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'rotate_gen' (5#1) [C:/Users/17149/Documents/CECS361_GroupProject/sseg_sources/rotate_gen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'anode_selector' [C:/Users/17149/Documents/CECS361_GroupProject/sseg_sources/anode_selector.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'anode_selector' (6#1) [C:/Users/17149/Documents/CECS361_GroupProject/sseg_sources/anode_selector.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Counter' [C:/Users/17149/Documents/CECS361_GroupProject/sseg_sources/Counter.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/17149/Documents/CECS361_GroupProject/sseg_sources/Counter.v:36]
+WARNING: [Synth 8-5788] Register sel_reg in module Counter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/17149/Documents/CECS361_GroupProject/sseg_sources/Counter.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'Counter' (7#1) [C:/Users/17149/Documents/CECS361_GroupProject/sseg_sources/Counter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hex_to_sseg' [C:/Users/17149/Documents/CECS361_GroupProject/sseg_sources/hex_to_sseg.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hex_to_sseg' (8#1) [C:/Users/17149/Documents/CECS361_GroupProject/sseg_sources/hex_to_sseg.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'SSEG' (9#1) [C:/Users/17149/Documents/CECS361_GroupProject/sseg_sources/top_level_sseg.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Top_level' (10#1) [C:/Users/17149/Documents/CECS361_GroupProject/Top_level.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 874.375 ; gain = 242.383
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 874.375 ; gain = 242.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 874.375 ; gain = 242.383
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/17149/Documents/CECS361_GroupProject/NexysA7-100t.xdc]
+Finished Parsing XDC File [C:/Users/17149/Documents/CECS361_GroupProject/NexysA7-100t.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/17149/Documents/CECS361_GroupProject/NexysA7-100t.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_level_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1001.461 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1001.461 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1001.461 ; gain = 369.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1001.461 ; gain = 369.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1001.461 ; gain = 369.469
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/17149/Documents/CECS361_GroupProject/ALU_rio.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'Y_reg' [C:/Users/17149/Documents/CECS361_GroupProject/ALU_rio.v:49]
+WARNING: [Synth 8-327] inferring latch for variable 'overflow_reg' [C:/Users/17149/Documents/CECS361_GroupProject/ALU_rio.v:49]
+WARNING: [Synth 8-327] inferring latch for variable 'next_write_reg' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:71]
+WARNING: [Synth 8-327] inferring latch for variable 'data_out_reg' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:74]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[0]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[1]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[2]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[3]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[4]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[5]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[6]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[7]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[8]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[9]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[10]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[11]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[12]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[13]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[14]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[15]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[16]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[17]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[18]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[19]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[20]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[21]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[22]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[23]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[24]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[25]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[26]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[27]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[28]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[29]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[30]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[31]' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'next_top_reg' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:106]
+WARNING: [Synth 8-327] inferring latch for variable 'next_front_reg' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'next_slot_reg' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:73]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1001.461 ; gain = 369.469
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input     33 Bit       Adders := 1     
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	                4 Bit    Wide XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               10 Bit    Registers := 5     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	  16 Input     32 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 10    
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 53    
+	   7 Input      1 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Top_level 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input     33 Bit       Adders := 1     
+	   3 Input     33 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	  16 Input     32 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 2     
+Module Memory_Controller 
+Detailed RTL Component Info : 
++---XORs : 
+	                4 Bit    Wide XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+	   7 Input      1 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 1     
+Module memory2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 3     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 39    
+Module rotate_gen 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module anode_selector 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module Counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP temp, operation Mode is: A*B.
+DSP Report: operator temp is absorbed into DSP temp.
+DSP Report: operator temp is absorbed into DSP temp.
+DSP Report: Generating DSP temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator temp is absorbed into DSP temp.
+DSP Report: operator temp is absorbed into DSP temp.
+DSP Report: Generating DSP temp, operation Mode is: A*B.
+DSP Report: operator temp is absorbed into DSP temp.
+DSP Report: operator temp is absorbed into DSP temp.
+DSP Report: Generating DSP temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator temp is absorbed into DSP temp.
+DSP Report: operator temp is absorbed into DSP temp.
+WARNING: [Synth 8-3917] design Top_level has port cathode[7] driven by constant 1
+WARNING: [Synth 8-264] enable of latch mem/\next_front_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch mem/\next_front_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch mem/\next_front_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch mem/\next_front_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch mem/\next_front_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch mem/\next_front_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch mem/\next_front_reg[3]  is always disabled
+WARNING: [Synth 8-264] enable of latch mem/\next_front_reg[3]  is always disabled
+WARNING: [Synth 8-264] enable of latch mem/\next_front_reg[4]  is always disabled
+WARNING: [Synth 8-264] enable of latch mem/\next_front_reg[4]  is always disabled
+INFO: [Synth 8-3886] merging instance 'sseg/cntr/hexVal_reg[0]' (FD) to 'sseg/cntr/hexVal_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sseg/cntr/hexVal_reg[1]' (FD) to 'sseg/cntr/hexVal_reg[2]'
+INFO: [Synth 8-3886] merging instance 'sseg/cntr/hexVal_reg[2]' (FD) to 'sseg/cntr/hexVal_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sseg/cntr/hexVal_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (Y_reg[31]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[30]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[29]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[28]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[27]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[26]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[25]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[24]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[23]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[22]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[21]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[20]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[19]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[18]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[17]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[16]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[15]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[14]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[13]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[12]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[11]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[10]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[9]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[8]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[7]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[6]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[5]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[4]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[3]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[2]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[1]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (Y_reg[0]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (overflow_reg) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[31]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[30]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[29]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[28]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[27]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[26]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[25]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[24]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[23]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[22]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[21]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[20]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[19]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[18]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[17]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[16]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[15]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[14]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[13]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[12]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[11]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[10]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[9]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[8]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[7]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[6]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[5]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[4]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[3]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[2]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[1]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (data_out_reg[0]) is unused and will be removed from module memory2.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[31]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[30]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[29]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[28]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[27]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[26]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[25]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[24]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[23]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[22]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[21]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[20]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[19]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[18]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[17]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[16]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[15]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[14]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[13]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[12]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[11]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[10]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[9]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[8]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[7]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[6]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[5]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[4]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[3]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[2]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[1]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/data_out_reg[0]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:48]
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][31]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][30]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][29]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][28]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][27]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][26]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][25]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][24]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][23]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][22]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][21]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][20]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][19]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][18]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][17]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][16]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][15]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][14]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][13]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][12]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][11]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][10]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][9]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][8]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][7]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][6]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][5]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][4]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][3]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][2]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][1]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[0][0]) is unused and will be removed from module memory2.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][31]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][30]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][29]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][28]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][27]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][26]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][25]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][24]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][23]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][22]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][21]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][20]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][19]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][18]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][17]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][16]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][15]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'mem/memory_reg[0][14]__0/Q' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+WARNING: [Synth 8-3332] Sequential element (memory_reg[1][31]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[1][30]) is unused and will be removed from module memory2.
+WARNING: [Synth 8-3332] Sequential element (memory_reg[1][29]) is unused and will be removed from module memory2.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sources_1/new/memory2.v:46]
+INFO: [Common 17-14] Message 'Synth 8-6858' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1001.461 ; gain = 369.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ALU         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1001.461 ; gain = 369.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1001.461 ; gain = 369.469
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1001.461 ; gain = 369.469
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1002.004 ; gain = 370.012
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1002.004 ; gain = 370.012
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1002.004 ; gain = 370.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1002.004 ; gain = 370.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1002.004 ; gain = 370.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1002.004 ; gain = 370.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     7|
+|3     |LUT1   |     1|
+|4     |LUT2   |    24|
+|5     |LUT3   |     4|
+|6     |LUT4   |     4|
+|7     |LUT5   |     1|
+|8     |LUT6   |    11|
+|9     |FDCE   |    31|
+|10    |FDPE   |     7|
+|11    |LD     |     6|
+|12    |IBUF   |     7|
+|13    |OBUF   |    18|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------+------------------+------+
+|      |Instance   |Module            |Cells |
++------+-----------+------------------+------+
+|1     |top        |                  |   122|
+|2     |  mc       |Memory_Controller |    21|
+|3     |  mem      |memory2           |    20|
+|4     |  sseg     |SSEG              |    55|
+|5     |    an_sel |anode_selector    |     8|
+|6     |    rt_gen |rotate_gen        |    47|
++------+-----------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1002.004 ; gain = 370.012
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3183 critical warnings and 1154 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1002.004 ; gain = 242.926
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1002.004 ; gain = 370.012
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1017.297 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  LD => LDCE: 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+42 Infos, 156 Warnings, 200 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1017.297 ; gain = 662.426
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1017.297 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.runs/synth_1/Top_level.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Top_level_utilization_synth.rpt -pb Top_level_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 29 20:27:44 2020...

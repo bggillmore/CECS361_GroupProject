@@ -1,9 +1,15 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "../../../../ALU_rio.v" \
+"../../../../sseg_sources/Counter.v" \
 "../../../../Memory_Controller.v" \
 "../../../../Top_level.v" \
+"../../../../sseg_sources/anode_selector.v" \
+"../../../../CECS361_GroupProject.srcs/sources_1/new/debounce.v" \
+"../../../../sseg_sources/hex_to_sseg.v" \
 "../../../../CECS361_GroupProject.srcs/sources_1/new/memory2.v" \
+"../../../../sseg_sources/rotate_gen.v" \
+"../../../../sseg_sources/top_level_sseg.v" \
 "../../../../top_level_tb.v" \
 
 # compile glbl module
