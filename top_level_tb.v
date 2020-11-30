@@ -29,7 +29,7 @@ wire empty, full;
  
 Top_level tl(.clk(clk), .rst(rst), .stackQueue(sq), .switches(sw), .btns(btns), 
              .toSSEG(sseg), .empty(empty), .full(full));
-integer i;
+integer i, j, seriesSum;
 always #5 clk = ~clk;
 initial begin
     rst = 0;
@@ -56,11 +56,23 @@ initial begin
     $display("Memory Filled!");
     
     //add together values as stack
-    #20
-    btns = 5'b00010;
-    #50
-    btns = 5'b0;
-    
+    for(i = 0; i < 31; i = i+1)
+    begin
+        #20
+        btns = 5'b00010;
+        #60
+        btns = 5'b0;
+        seriesSum = 0;
+        for(j = 32; j > (30-i); j = j-1)
+        begin
+            seriesSum = seriesSum + j;
+        end
+        if(seriesSum !== sseg)
+        begin
+            $display("sum: %h    sseg: %h ", seriesSum, sseg);
+            $display("Error!");
+        end
+    end
     $display("DONE!");
 end
 

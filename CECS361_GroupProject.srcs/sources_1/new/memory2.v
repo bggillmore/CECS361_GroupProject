@@ -37,7 +37,7 @@ module memory2(
     
     integer i;
     assign full = (next_write === 32); //all slots filled
-    assign empty = (next_write === 0); //all slots 'blank' (it won't be able to see the memory anyway if empty is high)
+    assign empty = (writecount === 0); //all slots 'blank' (it won't be able to see the memory anyway if empty is high)
 
     //Sequential Block
     always @(posedge clk, negedge reset) begin
@@ -100,33 +100,22 @@ module memory2(
             if (push_queue) begin //Push
                 if(~full)
                 begin
-                    next_write = writecount+1;
+                    next_write = writecount + 5'b1;
                     memory[slot] = data_in;
-                    next_slot = (slot == 31)? 0 : slot + 1;
+                    next_slot = slot + 5'b1;
                     data_out = memory[slot];
                     next_top = slot;
                 end
-                //next_write = (full)? writecount : writecount + 1; //Add to counter. If full, stop counting up.
-                //memory[slot] = (full) ? memory[slot] : data_in; //if full, do not take in any new data input
-                //next_slot = (full)? slot : (slot == 31)? 0 : slot + 1; //if full, stay on same slot, else go to next higher slot
-                //next_out = (full)? data_out : memory[slot]; //display inputted data. If full, show last data inputted.
-                //data_out = (full)? data_out : memory[slot]; //display inputted data. If full, show last data inputted.
-                //next_top = (full)? top : slot; //go up to next top block of data that is present.
             end
             
             else if (pop_dequeue) begin //Pop data off top of stack
                 if(~empty)
                 begin
-                    next_write = writecount - 1;
-                    next_slot = (slot == 0)? 31 : slot - 1;
-                    data_out = (top == 0)? memory[31] : memory[top]; 
-                    next_top =  top - 1;
+                    next_write = writecount - 5'b1;
+                    next_slot = slot - 5'b1;
+                    data_out = memory[top]; 
+                    next_top =  top - 5'b1;
                 end
-                //next_write = (empty)? writecount : writecount - 1; //Subtract from counter. If empty, stop counting down.
-                //next_slot = (empty)? slot : (slot == 0)? 31 : slot - 1;
-                //data_out = (empty || writecount==1)? 32'b0 : (top == 0)? memory[31] : memory[top]; //if empty=1 OR next_write=0(therefore, if writecount=1), display 0. Else, display next top data stacked.
-                //next_out = (empty || writecount==1)? 32'b0 : (top == 0)? memory[31] : memory[top-1]; //if empty=1 OR next_write=0(therefore, if writecount=1), display 0. Else, display next top data stacked.
-                //next_top = (empty)? top : top - 1; //go down to next top block of data that is present.
             end
             
             else begin //Hold all data
