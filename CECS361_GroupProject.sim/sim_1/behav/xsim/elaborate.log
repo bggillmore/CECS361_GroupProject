@@ -1,6 +1,6 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto b299cf285faf408b8829cc3a201ff976 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_level_tb_behav xil_defaultlib.top_level_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto b299cf285faf408b8829cc3a201ff976 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sanity_check_behav xil_defaultlib.sanity_check xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -17,6 +17,6 @@ Compiling module xil_defaultlib.Counter
 Compiling module xil_defaultlib.hex_to_sseg
 Compiling module xil_defaultlib.SSEG
 Compiling module xil_defaultlib.Top_level
-Compiling module xil_defaultlib.top_level_tb
+Compiling module xil_defaultlib.sanity_check
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot top_level_tb_behav
+Built simulation snapshot sanity_check_behav

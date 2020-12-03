@@ -38,32 +38,34 @@ module Top_level(
 
     //debounce btns
     //pulse gen
-    assign ld = (clkCounter == 9_999)? 1'b1 : 1'b0;
-    debounce db0(.clk(clk), .rst(rst), .btn(btns[0]), .ld(ld), .posedgeDetected(btn_db[0]));
-    debounce db1(.clk(clk), .rst(rst), .btn(btns[1]), .ld(ld), .posedgeDetected(btn_db[1]));
-    debounce db2(.clk(clk), .rst(rst), .btn(btns[2]), .ld(ld), .posedgeDetected(btn_db[2]));
-    debounce db3(.clk(clk), .rst(rst), .btn(btns[3]), .ld(ld), .posedgeDetected(btn_db[3]));
-    debounce db4(.clk(clk), .rst(rst), .btn(btns[4]), .ld(ld), .posedgeDetected(btn_db[4]));
+    
+//assign ld = (clkCounter == 9_999)? 1'b1 : 1'b0;
+    debounce db0(.clk(clk), .reset(rst), .sw(btns[0]), .db(btn_db[0]));
+    debounce db1(.clk(clk), .reset(rst), .sw(btns[1]), .db(btn_db[1]));
+    debounce db2(.clk(clk), .reset(rst), .sw(btns[2]), .db(btn_db[2]));
+    debounce db3(.clk(clk), .reset(rst), .sw(btns[3]), .db(btn_db[3]));
+    debounce db4(.clk(clk), .reset(rst), .sw(btns[4]), .db(btn_db[4]));
+    
     
     //alu
-    ALU alu(.A(aluA), .B(aluB), .op(btns[4:1]), .Y(Y), .overflow());
+    ALU alu(.A(aluA), .B(aluB), .op(btn_db[4:1]), .Y(Y), .overflow());
     
     //mem cont
     Memory_Controller mc(.clk(clk), .rst(rst), .switches(switches), .aluOut(Y), 
-                         .memOut(memOut), .btns(btns), .memIn(memIn), .push(push), 
+                         .memOut(memOut), .btns(btn_db), .memIn(memIn), .push(push), 
                          .pop(pop), .aluA(aluA), .aluB(aluB));
     //mem unit
     memory2 mem(.clk(clk), .reset(rst), .data_in(memIn), .push_queue(push), .pop_dequeue(pop), .sel(stackQueue), 
                .data_out(memOut), .empty(empty), .full(full));
 
     //sseg
-    SSEG sseg(.clk(clk), .rst(rst), .in(32'h12345678), .anode(anode), .cathode(cathode));
+    SSEG sseg1(.clk(clk), .rst(rst), .in(memOut), .anode(anode), .cathode(cathode));
     
-    
+    /*
     //count clock cycles
-    always@(posedge clk, posedge rst)
+    always@(posedge clk, negedge rst)
     begin
-        if(rst)
+        if(~rst)
             clkCounter <= 14'b0;
         else
             if(ld)
@@ -73,4 +75,5 @@ module Top_level(
                 //increment clk counter
                 clkCounter <= clkCounter + 1'b1;
     end
+    */
 endmodule

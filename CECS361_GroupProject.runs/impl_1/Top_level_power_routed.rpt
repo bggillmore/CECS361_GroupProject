@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sun Nov 29 20:29:03 2020
+| Date             : Thu Dec  3 10:55:20 2020
 | Host             : DESKTOP-6G1AIBC running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_level_power_routed.rpt -pb Top_level_power_summary_routed.pb -rpx Top_level_power_routed.rpx
 | Design           : Top_level
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.008        |
-| Design Power Budget (W)  | Unspecified* |
-| Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.908        |
-| Device Static (W)        | 0.100        |
-| Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 80.4         |
-| Junction Temperature (C) | 29.6         |
-| Confidence Level         | Low          |
-| Setting File             | ---          |
-| Simulation Activity File | ---          |
-| Design Nets Matched      | NA           |
-+--------------------------+--------------+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 23.422 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                     |
+| Power Budget Margin (W)  | NA                               |
+| Dynamic (W)              | 22.625                           |
+| Device Static (W)        | 0.797                            |
+| Effective TJA (C/W)      | 4.6                              |
+| Max Ambient (C)          | 0.0                              |
+| Junction Temperature (C) | 125.0                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -52,16 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.147 |      114 |       --- |             --- |
-|   LUT as Logic |     0.119 |       42 |     63400 |            0.07 |
-|   CARRY4       |     0.013 |        7 |     15850 |            0.04 |
-|   Register     |     0.009 |       52 |    126800 |            0.04 |
-|   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        9 |       --- |             --- |
-| Signals        |     0.095 |       79 |       --- |             --- |
-| I/O            |     0.666 |       25 |       210 |           11.90 |
-| Static Power   |     0.100 |          |           |                 |
-| Total          |     1.008 |          |           |                 |
+| Slice Logic    |    11.745 |     2196 |       --- |             --- |
+|   LUT as Logic |     9.579 |     1404 |     63400 |            2.21 |
+|   CARRY4       |     2.118 |      340 |     15850 |            2.15 |
+|   Register     |     0.042 |      366 |    126800 |            0.29 |
+|   BUFG         |     0.006 |        3 |        32 |            9.38 |
+|   Others       |     0.000 |       25 |       --- |             --- |
+|   F7/F8 Muxes  |     0.000 |        4 |     63400 |           <0.01 |
+| Signals        |    10.404 |     2043 |       --- |             --- |
+| DSPs           |    <0.001 |        3 |       240 |            1.25 |
+| I/O            |     0.476 |       41 |       210 |           19.52 |
+| Static Power   |     0.797 |          |           |                 |
+| Total          |    23.422 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,16 +73,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.284 |       0.266 |      0.018 |
-| Vccaux    |       1.800 |     0.042 |       0.024 |      0.018 |
-| Vcco33    |       3.300 |     0.186 |       0.182 |      0.004 |
+| Vccint    |       1.000 |    22.800 |      22.238 |      0.563 |
+| Vccaux    |       1.800 |     0.107 |       0.014 |      0.093 |
+| Vcco33    |       3.300 |     0.114 |       0.110 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.018 |       0.000 |      0.018 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -138,12 +140,19 @@ Table of Contents
 +------------+-----------+
 | Name       | Power (W) |
 +------------+-----------+
-| Top_level  |     0.908 |
-|   mc       |     0.072 |
-|   mem      |     0.010 |
-|   sseg     |     0.129 |
+| Top_level  |    22.625 |
+|   alu      |    21.203 |
+|   db0      |     0.092 |
+|   db1      |     0.088 |
+|   db2      |     0.087 |
+|   db3      |     0.128 |
+|   db4      |     0.093 |
+|   mc       |     0.169 |
+|   mem      |     0.007 |
+|   sseg1    |     0.140 |
 |     an_sel |     0.004 |
-|     rt_gen |     0.125 |
+|     cntr   |     0.007 |
+|     rt_gen |     0.128 |
 +------------+-----------+
 
 

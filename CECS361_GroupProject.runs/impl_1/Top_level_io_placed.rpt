@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date                      : Sun Nov 29 20:28:26 2020
+| Date                      : Thu Dec  3 10:54:42 2020
 | Host                      : DESKTOP-6G1AIBC running 64-bit major release  (build 9200)
 | Command                   : report_io -file Top_level_io_placed.rpt
 | Design                    : Top_level
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            41 |
+|            42 |
 +---------------+
 
 

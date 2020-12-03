@@ -42,13 +42,6 @@ module Counter(
                 3'o5: hexVal = in[23:20];
                 3'o6: hexVal = in[27:24];
                 3'o7: hexVal = in[31:28];
-                
-                
-                /*
-                3'o4: hexVal = in[3:0];
-                3'o5: hexVal = in[7:4];
-                3'o6: hexVal = in[11:8];
-                3'o7: hexVal = in[15:12];*/
                 default hexVal = 3'b000;
             endcase
     end

@@ -102,7 +102,7 @@ initial begin
     //Queue adding has been checked manually since finding an algorithm to check queue operation by itteration is suprisingly hard. 
     //One would need to actually code a fake queue. Seems pointless as i can just verify by the waveform.
     $display("Begining Queue Adding Test");
-    for(i = 0; i < 31; i = i+1)
+    for(i = 0; i < 28; i = i+1)
     begin
         #100
         btns = 5'b00010;

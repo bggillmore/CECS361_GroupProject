@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Nov 29 20:28:26 2020
+| Date         : Thu Dec  3 10:54:42 2020
 | Host         : DESKTOP-6G1AIBC running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_level_control_sets_placed.rpt
 | Design       : Top_level
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     3 |
-|    Minimum number of control sets                        |     3 |
+| Total control sets                                       |     9 |
+|    Minimum number of control sets                        |     9 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |     4 |
+| Unused register locations in slices containing registers |    18 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     3 |
+| Total control sets |     9 |
 | >= 0 to < 4        |     0 |
-| >= 4 to < 6        |     0 |
+| >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     1 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     2 |
+| >= 16              |     7 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               6 |            2 |
-| No           | No                    | Yes                    |              30 |            8 |
-| No           | Yes                   | No                     |               0 |            0 |
+| No           | No                    | No                     |              42 |           24 |
+| No           | No                    | Yes                    |             177 |           57 |
+| No           | Yes                   | No                     |              32 |           20 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              16 |            3 |
+| Yes          | No                    | Yes                    |             115 |           52 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,12 +70,18 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------------+------------------+------------------+------------------+----------------+
-|          Clock Signal          |   Enable Signal  | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+--------------------------------+------------------+------------------+------------------+----------------+
-|  mem/next_write_reg[5]_i_2_n_0 |                  |                  |                2 |              6 |
-|  clk_IBUF_BUFG                 | sseg/rt_gen/E[0] | sseg/rt_gen/rst  |                3 |             16 |
-|  clk_IBUF_BUFG                 |                  | sseg/rt_gen/rst  |                8 |             30 |
-+--------------------------------+------------------+------------------+------------------+----------------+
++----------------+----------------------+------------------+------------------+----------------+
+|  Clock Signal  |     Enable Signal    | Set/Reset Signal | Slice Load Count | Bel Load Count |
++----------------+----------------------+------------------+------------------+----------------+
+|  clk_IBUF_BUFG |                      |                  |                2 |              4 |
+|  mc/E[0]       |                      |                  |                2 |              6 |
+|  clk_IBUF_BUFG | sseg1/rt_gen/rotate  | mc/rst           |                5 |             19 |
+|  clk_IBUF_BUFG | mc/aluB[31]_i_1_n_2  | mc/rst           |               14 |             32 |
+|  clk_IBUF_BUFG | mc/memIn[31]_i_1_n_2 | mc/rst           |               20 |             32 |
+|  clk_IBUF_BUFG | mc/aluA[31]_i_1_n_2  | mc/rst           |               13 |             32 |
+|  n_0_1391_BUFG |                      |                  |               20 |             32 |
+|  n_1_1498_BUFG |                      | mc/AR[0]         |               20 |             32 |
+|  clk_IBUF_BUFG |                      | mc/rst           |               57 |            177 |
++----------------+----------------------+------------------+------------------+----------------+
 
 

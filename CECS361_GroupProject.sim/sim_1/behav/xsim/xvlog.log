@@ -18,5 +18,7 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/17149/Documents/CECS361_Gr
 INFO: [VRFC 10-311] analyzing module rotate_gen
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/17149/Documents/CECS361_GroupProject/sseg_sources/top_level_sseg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module SSEG
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/17149/Documents/CECS361_GroupProject/top_level_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top_level_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sim_1/new/sanity_check.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sanity_check
+WARNING: [VRFC 10-986] literal value truncated to fit in 16 bits [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sim_1/new/sanity_check.v:46]
+WARNING: [VRFC 10-986] literal value truncated to fit in 16 bits [C:/Users/17149/Documents/CECS361_GroupProject/CECS361_GroupProject.srcs/sim_1/new/sanity_check.v:53]

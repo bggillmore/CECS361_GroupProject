@@ -29,7 +29,7 @@ module memory2(
     );
 // bits per memory || number of memory spaces (AKA slots)
     reg [31:0] memory [0:31];           //32x32 bit memory space
-//reg [31:0] next_out;                //will work like an FSM
+    reg [31:0] next_out;                //Kristella: **I added this variable back** data_out will display next_out on positive edge of clock
     reg [4:0] slot, next_slot,          // write pointer (push/queue)
               front, next_front,        // pointer to locate Front element (FIFO) (or Bottom element(LIFO))
               top, next_top;            // pointer to locate Top element(LIFO)
@@ -53,8 +53,8 @@ module memory2(
             next_front <= 0;
         end
         
-        else begin
-            //data_out   <= next_out; //for some reason, I can't make the 'slot' and 'front' variables 5-bit b/c if so, the data in front/top gets "skipped".
+        else begin // Kristella: **added back the next_out variable so that the data is only displayed on posedge of clock**
+            data_out   <= next_out; //for some reason, I can't make the 'slot' and 'front' variables 5-bit b/c if so, the data in front/top gets "skipped".
             slot       <= next_slot;
             front      <= (next_front == 32)? 0 : next_front; 
             top        <= next_top;   //top does not update if the next data input is NOT YET PRESENT.
@@ -71,7 +71,7 @@ module memory2(
                     next_write = writecount + 5'b1; //Add to counter. If full, stop counting up.
                     memory[slot] =  data_in;        //if full, do not take in any new data input
                     next_slot = slot + 5'b1;        //if full, stay on same slot, else go to next higher slot
-                    data_out = memory[slot];        //display inputted data. If full, show last data inputted.
+                    next_out = memory[slot];        //display inputted data. If full, show last data inputted.
                 end
             end
             
@@ -80,17 +80,17 @@ module memory2(
                 begin
                     next_write = writecount - 5'b1; //Subtract from counter. If empty, stop counting down.
                     next_front = front + 5'b1;      //update FIFO pointer to next data in front of line
-                    data_out = memory[front];       // expose popped data for one clock
+                    next_out = memory[front];       // expose popped data for one clock
                 end
                 else
-                    data_out = 32'b0;
+                    next_out = 32'b0;
             end
             
             else begin //Hold all data
                 next_write = writecount;
                 next_front = front;
                 next_slot = slot;
-                data_out = (empty)?32'b0:data_out; //display rear of queue so we can see what is added
+                next_out = (empty)?32'b0:data_out; //display rear of queue so we can see what is added
             end
         end
         
@@ -102,7 +102,7 @@ module memory2(
                     next_write = writecount + 5'b1;
                     memory[slot] = data_in;
                     next_slot = slot + 5'b1;
-                    data_out = memory[slot];
+                    next_out = memory[slot];
                     next_top = slot;
                 end
             end
@@ -112,20 +112,19 @@ module memory2(
                 begin
                     next_write = writecount - 5'b1;
                     next_slot = slot - 5'b1;
-                    data_out = memory[top]; 
+                    next_out = memory[top-1]; //Kristella: **memory index was edited for user to see the data that is on top stack instead of the data popped off**. Do you want the user to see the next value that is still on top stack? Or do you want the user to see the data that is being popped from stack?
                     next_top =  top - 5'b1;
                 end
                 else
-                    data_out = 32'b0;
+                    next_out = 32'b0;
             end
             
             else begin //Hold all data
                 next_write = writecount;
                 next_slot = slot;
-                data_out = (empty)? 32'b0 : data_out; //display & hold last data inputted.
+                next_out = (empty)? 32'b0 : data_out; //display & hold last data inputted.
                 next_top = top;
             end
         end
     end
-    
 endmodule
